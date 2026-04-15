@@ -1,3 +1,18 @@
+export interface HealthCheck {
+  status: string
+}
+
+export interface ApiResponse<T> {
+  data: T;
+  message?: string;
+}
+
+export interface User {
+  id: number
+  name: string | null
+  email: string 
+}
+
 export interface Course {
   id: string;
   name: string;
@@ -45,19 +60,4 @@ export interface StudentSubmission {
 export interface CourseWorkWithSubmission {
   courseWork: CourseWorkItem;
   submission: StudentSubmission | null;
-}
-
-export interface HealthCheck {
-  status: string
-}
-
-export interface ApiResponse<T> {
-  data: T;
-  message?: string;
-}
-
-export interface User {
-  id: number
-  email: string 
-  name: string | null
 }
